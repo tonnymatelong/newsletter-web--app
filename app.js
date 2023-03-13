@@ -13,7 +13,7 @@ dotenv.config();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-const port = process.env.PORT;
+var port = process.env.PORT || "3000";
 
 app.get("/", (req,res) => {
     res.sendFile(__dirname + "/signup.html");
